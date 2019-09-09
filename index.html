@@ -1,28 +1,24 @@
 <body>
-    <h2 id="title">XMLHttpRequest - dcode</h2>
-    <p id="gotmail"></p>
+    <title>XMLHttpRequest - dcod</title>
+    <h2>who are you ? </h2>
+    <h1 id="iam"></h1>
 </body>
 
 <script type="text/javascript">
     const xhr = new XMLHttpRequest();
 
-    //on XHR change call this function
     xhr.onreadystatechange = () => {
-
+        //State 4  - Completed resquest 
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
-                //reading to read the data to the body
-                document.getElementById('gotmail').textContent = xhr.responseText;
+                document.getElementById('iam').textContent = xhr.responseText;
             }
             if (xhr.status == 404) {
                 console.log("File not found! ");
             }
         }
-
     };
-
-    xhr.open('get','dom.txt',true);
+    //fetch data
+    xhr.open('get', 'dom.txt', true);
     xhr.send();
-    
-
 </script>
