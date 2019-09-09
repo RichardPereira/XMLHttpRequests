@@ -6,21 +6,12 @@
 
 <script type="text/javascript">
     const xhr = new XMLHttpRequest();
-<<<<<<< HEAD
-
+    
     xhr.onreadystatechange = () => {
         //State 4  - Completed resquest 
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
                 document.getElementById('iam').textContent = xhr.responseText;
-=======
-    //on XHR change call this function
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
-                //ready to read the data to the body
-                document.getElementById('gotmail').textContent = xhr.responseText;
->>>>>>> 023dc0c07db5d6c1b3badce0ce742883659f97fe
             }
             if (xhr.status == 404) {
                 console.log("File not found! ");
@@ -30,8 +21,5 @@
     //fetch data
     xhr.open('get', 'dom.txt', true);
     xhr.send();
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> 023dc0c07db5d6c1b3badce0ce742883659f97fe
+
