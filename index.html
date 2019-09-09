@@ -5,24 +5,19 @@
 
 <script type="text/javascript">
     const xhr = new XMLHttpRequest();
-
     //on XHR change call this function
     xhr.onreadystatechange = () => {
-
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
-                //reading to read the data to the body
+                //ready to read the data to the body
                 document.getElementById('gotmail').textContent = xhr.responseText;
             }
             if (xhr.status == 404) {
                 console.log("File not found! ");
             }
         }
-
     };
 
     xhr.open('get','dom.txt',true);
     xhr.send();
-    
-
 </script>
